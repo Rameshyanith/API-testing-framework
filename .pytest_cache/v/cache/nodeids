@@ -1,0 +1,9 @@
+[
+  "tests/test_users.py::test_all_user_emails_have_valid_format",
+  "tests/test_users.py::test_get_all_users",
+  "tests/test_users.py::test_get_nonexistent_user",
+  "tests/test_users.py::test_get_user_by_id[1-Leanne Graham]",
+  "tests/test_users.py::test_get_user_by_id[2-Ervin Howell]",
+  "tests/test_users.py::test_get_user_by_id[3-Clementine Bauch]",
+  "tests/test_users.py::test_get_user_invalid_id"
+]
