@@ -1,4 +1,8 @@
 [
+  "tests/test_get.py::test_get_empty_response",
+  "tests/test_get.py::test_get_invalid_endpoint",
+  "tests/test_get.py::test_get_valid_endpoint",
+  "tests/test_get.py::test_get_with_query_params",
   "tests/test_users.py::test_all_user_emails_have_valid_format",
   "tests/test_users.py::test_get_all_users",
   "tests/test_users.py::test_get_nonexistent_user",

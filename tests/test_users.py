@@ -67,4 +67,4 @@ def test_get_user_invalid_id(api_client):
         api_client.get("/users/abc")
 
     # Assertions
-    assert "404 Client Error" in str(excinfo.value) #Expected 404 error for invalid user ID"
+    assert "404 Client Error" in str(excinfo.value) # Expected 404 error for invalid user ID"

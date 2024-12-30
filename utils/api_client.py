@@ -35,7 +35,7 @@ class APIClient:
         response.raise_for_status()
         return response.json()
     
-    def put(self,endpoint,data=None):
+    def put(self,endpoint,data= None):
         """
         Sends a PUT request to the API to update data.
 
