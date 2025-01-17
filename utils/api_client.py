@@ -20,7 +20,7 @@ class APIClient:
         response.raise_for_status()  # Raises HTTPError for bad responses (4xx, 5xx)
         return response.json()
     
-    def post(self,endpoint,data=None):
+    def post(self,endpoint,data=None,return_response=False):
         """
         Sends a POST request to the API.
 
@@ -33,7 +33,7 @@ class APIClient:
          """
         response = requests.post(f"{self.base_url}{endpoint}", json=data)
         response.raise_for_status()
-        return response.json()
+        return response if return_response else response.json()
     
     def put(self,endpoint,data= None):
         """
@@ -46,7 +46,7 @@ class APIClient:
         Returns:
             dict: Parsed JSON response.
         """
-        response=requests.put(f"{self.base_url}{endpoint}",data=None)
+        response=requests.put(f"{self.base_url}{endpoint}",json=data)
         response.raise_for_status()
         return response.json()
     
