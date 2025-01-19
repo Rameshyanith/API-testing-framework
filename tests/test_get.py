@@ -22,6 +22,7 @@ def test_get_with_query_params( api_client):
     endpoint = "/users"
     params = {"id": 1}  # Query parameter to filter by user id
     response = api_client.get(endpoint, params=params)
+
     assert isinstance(response, list)  # Should return a list
     assert len(response) == 1  # Only one user should be returned with id=1
     assert response[0]["id"] == 1  # Ensure the returned user has id=1
@@ -30,6 +31,7 @@ def test_get_with_query_params( api_client):
 
 def test_get_invalid_endpoint(api_client):
     endpoint = "/nonexistent_endpoint"  # Invalid endpoint
+    
     try:
         api_client.get(endpoint)
         assert False #Expected HTTPError, but no error was raised"
@@ -42,6 +44,7 @@ def test_get_empty_response(api_client):
     endpoint = "/posts"  # Assuming no posts for a certain condition (you could simulate that)
     params = {"userId": 999}  # User ID that likely has no posts
     response = api_client.get(endpoint, params=params)
+
     assert isinstance(response, list)  # Response should still be a list, even if empty
     assert len(response) == 0  # Expecting an empty list
 
