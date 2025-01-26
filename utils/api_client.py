@@ -50,19 +50,19 @@ class APIClient:
         response.raise_for_status()
         return response.json()
     
-    def delete(self,endpoint):
-        """
+    def delete(self, endpoint):
+       """
         Sends a DELETE request to the API.
 
         Args:
-            endpoint (str): API endpoint.
+        endpoint (str): API endpoint.
 
         Returns:
-            int: HTTP status code.
-        """
-        response = requests.delete(f"{self.base_url}{endpoint}")
-        response.raise_for_status()
-        return response.status_code()
+        int: HTTP status code.
+       """
+       response = requests.delete(f"{self.base_url}{endpoint}")
+       response.raise_for_status()  # This raises an exception for HTTP errors (e.g., 4xx or 5xx)
+       return response.status_code  # Correctly return the status code without parentheses
     
      
     
